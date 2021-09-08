@@ -10,13 +10,12 @@ class AngleCalc:
             angle -= 360
         return angle
 
-
     def isAngleBetween(self, first_angle, middle_angle, second_angle):
         """
-        :param first_angle:
-        :param middle_angle:
-        :param second_angle:
-        :return:
+        :param first_angle: First angle in degrees.
+        :param middle_angle: Middle angle in degrees.
+        :param second_angle: Second angle in degrees.
+        :return: Whether |middle_angle| is between |first_angle| and |second_angle| (exclusive).
         """
         if first_angle < 0:
             first_angle += 360

@@ -20,7 +20,13 @@ class TestCalc(unittest.TestCase):
 
     def test_cases(self):
         angle_calc = AngleCalc()
+        result1 = angle_calc.isAngleBetween(3, 1, 2)
+        result2 = angle_calc.isAngleBetween(0, 0 , 0)
         result3 = angle_calc.isAngleBetween(-90, -180, 110)
         result4 = angle_calc.isAngleBetween(-90, -180, 80)
+        result5 = angle_calc.isAngleBetween(5, 6, 10)
+        self.assertEqual(result2, False)
+        self.assertEqual(result1, False)
         self.assertEqual(result3, True)
         self.assertEqual(result4, False)
+        self.assertEqual(result5, True)
